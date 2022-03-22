@@ -1,0 +1,30 @@
+<app-fretboard
+  [id]="2"
+  [mode]="mode"
+  [tones]="tones"
+  (fretboardSelectedEvent)="fretboardSelectedEvent($event)"
+></app-fretboard>
+
+<button class="btn" (click)="setEditMode()">edit</button
+><button (click)="setDisplayMode()">display</button>
+
+<div *ngIf="itemSelected">
+  <p>Properties:</p>
+  <p>{{ selection.type }}</p>
+  fretboard: {{ selection.fretboard }}
+  <div *ngIf="selection.type === 1">
+    <label for="label">Label:</label>
+    <input
+      type="text"
+      id="label"
+      name="lable"
+      minlength="4"
+      maxlength="8"
+      size="10"
+    />
+
+    <li>string: {{ selection.string }}</li>
+    <li>fret: {{ selection.fret }}</li>
+    <li>label: {{ selection.label }}</li>
+  </div>
+</div>
