@@ -7,6 +7,7 @@ import { FretboardComponent } from './fretboard/fretboard.component';
 import { FretComponent } from './fret/fret.component';
 import { ToneComponent } from './tone/tone.component';
 import { StringComponent } from './string/string.component';
+import { PropertiesComponent } from './properties/properties.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
@@ -16,6 +17,7 @@ import { StringComponent } from './string/string.component';
     FretComponent,
     ToneComponent,
     StringComponent,
+    PropertiesComponent
   ],
   bootstrap: [AppComponent],
 })
